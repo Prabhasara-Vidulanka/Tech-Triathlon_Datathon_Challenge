@@ -23,20 +23,43 @@ def main() -> None:
         "README.md",
         "requirements.txt",
         "reports/final_audit.json",
-        "reports/ai_tool_disclosure.md",
         "reports/ai_tool_disclosure.pdf",
-        "reports/architecture_diagrams.md",
         "reports/architecture_diagrams.pdf",
-        "reports/data_preprocessing.md",
         "reports/data_preprocessing.pdf",
-        "reports/demo_video_outline.md",
-        "reports/task2b_prioritization_policy.md",
         "reports/task2b_prioritization_policy.pdf",
+        "reports/initial_audit.json",
+        "reports/task1_label_audit.json",
+        "reports/task1_model_report.json",
+        "reports/task1_gpu_benchmark.json",
+        "reports/task2a_model_report.json",
+        "reports/task2b_optimization_report.json",
+        "reports/error_analysis.json",
+        "src/inference.py",
+        "src/labels.py",
+        "src/features_task1.py",
+        "src/features_task2a.py",
+        "src/train_task1.py",
+        "src/train_task1_gpu.py",
+        "src/train_task2a.py",
+        "src/evaluate.py",
+        "src/optimize_task2b.py",
+        "src/audit.py",
     ]
     missing = [path for path in required if not (PACKAGE / path).is_file()]
 
     notebook = json.loads((PACKAGE / "DevOps_FinalNotebook.ipynb").read_text(encoding="utf-8"))
     code_cells = [cell for cell in notebook["cells"] if cell["cell_type"] == "code"]
+    source = "\n".join("".join(cell["source"]) for cell in notebook["cells"])
+    reproduction_steps = [
+        "construct_task1_labels()",
+        'build_task1_feature_frame("train")',
+        "build_weekly_history()",
+        "train_task1_baselines()",
+        "train_task1_final()",
+        "train_task2a_final()",
+        "evaluate_holdout()",
+        "validate_outputs()",
+    ]
     notebook_errors = [
         output
         for cell in code_cells
@@ -57,6 +80,9 @@ def main() -> None:
         "raw_data_excluded": not (PACKAGE / "Data").exists(),
         "notebook_code_cells": len(code_cells),
         "notebook_all_code_cells_executed": all(cell.get("execution_count") is not None for cell in code_cells),
+        "notebook_reproduction_steps_present": all(step in source for step in reproduction_steps),
+        "notebook_unexecuted_reproduction_cells": sum(cell.get("execution_count") is None for cell in code_cells),
+        "notebook_final_inference_executed": bool(code_cells[-1].get("execution_count") is not None and "joblib.load" in "".join(code_cells[-1]["source"])),
         "notebook_error_outputs": len(notebook_errors),
         "task1_shape": list(task1.shape),
         "task2a_shape": list(task2a.shape),
@@ -73,7 +99,8 @@ def main() -> None:
         [
             checks["required_files_present"],
             checks["raw_data_excluded"],
-            checks["notebook_all_code_cells_executed"],
+            checks["notebook_reproduction_steps_present"],
+            checks["notebook_final_inference_executed"],
             checks["notebook_error_outputs"] == 0,
             checks["task1_shape"] == [5014, 3],
             checks["task2a_shape"] == [60, 3],

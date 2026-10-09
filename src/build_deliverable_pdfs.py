@@ -29,6 +29,7 @@ from reportlab.platypus import (
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS = ROOT / "final_package" / "reports"
+SOURCE_REPORTS = ROOT / "reports"
 NAVY = colors.HexColor("#172B46")
 TEAL = colors.HexColor("#087E83")
 MUTED = colors.HexColor("#587080")
@@ -121,7 +122,7 @@ def md_story(source: Path, subtitle: str):
 
 
 def write_text_pdf(stem: str, subtitle: str):
-    source = REPORTS / f"{stem}.md"
+    source = SOURCE_REPORTS / f"{stem}.md"
     output = REPORTS / f"{stem}.pdf"
     doc = SimpleDocTemplate(str(output), pagesize=A4, rightMargin=47, leftMargin=47, topMargin=48, bottomMargin=58,
                             title=source.read_text(encoding="utf-8").splitlines()[0][2:], author="Waypoint Group")

@@ -1,6 +1,6 @@
 # Waypoint Group Datathon — Final Submission
 
-This package contains the complete solution for Task 1, Task 2A, and Task 2B.
+This package contains the deliverables for Task 1, Task 2A, and Task 2B.
 
 ## Required submissions
 
@@ -15,7 +15,7 @@ This package contains the complete solution for Task 1, Task 2A, and Task 2B.
 1. Extract this package next to the organiser-provided `Data` folder.
 2. Install the versions in `requirements.txt`.
 3. Start Jupyter in this extracted folder and open `DevOps_FinalNotebook.ipynb`.
-4. Run all cells. The last cell loads the saved model files and reproduces representative predictions.
+4. Run all cells. The final cell loads the saved model files and demonstrates representative predictions. Full reproduction cells are included before it and default to off. Set `RUN_FULL_REPRODUCTION = True` to regenerate labels, features, models, evaluation reports, and allocation in a separate `work` directory.
 
 Task 1 was trained with XGBoost 3.4.1 using CUDA. A compatible NVIDIA driver and CUDA-capable GPU are required only for retraining; loading the saved model and running inference can use the installed XGBoost package without retraining.
 
@@ -31,14 +31,13 @@ Task 1 was trained with XGBoost 3.4.1 using CUDA. A compatible NVIDIA driver and
 
 The competition booklet does not name an exact prediction metric for Task 1 or Task 2A. The notebook therefore reports multiple standard chronological metrics and does not present a surrogate metric as official.
 
-## Supporting material
+## Written deliverables
 
-- `reports/data_preprocessing.md`
-- `reports/architecture_diagrams.md`
-- `reports/task2b_prioritization_policy.md`
-- `reports/ai_tool_disclosure.md`
-- Print-ready PDFs of those four documents are alongside the Markdown sources in `reports/`.
-- `reports/demo_video_outline.md`
-- `figures/` and `reports/` for validation evidence and diagnostics
+- `reports/data_preprocessing.pdf`
+- `reports/architecture_diagrams.pdf`
+- `reports/task2b_prioritization_policy.pdf`
+- `reports/ai_tool_disclosure.pdf`
+
+The remaining `reports/*.json` files supply the notebook's displayed audit and validation results. The `src/` modules contain the full pipeline and are required for the notebook's inference and reproduction cells.
 
 The ZIP and notebook use `DevOps` as the team name. Confirm it matches the registered team name before upload. The required 3–5 minute unlisted YouTube demo video is submitted by URL through the organiser form; its URL is not included in this package.

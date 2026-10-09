@@ -2,8 +2,11 @@
   "required_files_present": true,
   "missing_files": [],
   "raw_data_excluded": true,
-  "notebook_code_cells": 7,
-  "notebook_all_code_cells_executed": true,
+  "notebook_code_cells": 11,
+  "notebook_all_code_cells_executed": false,
+  "notebook_reproduction_steps_present": true,
+  "notebook_unexecuted_reproduction_cells": 4,
+  "notebook_final_inference_executed": true,
   "notebook_error_outputs": 0,
   "task1_shape": [
     5014,
