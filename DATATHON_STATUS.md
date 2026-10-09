@@ -26,12 +26,12 @@ Status reviewed: 9 October 2026 (Sri Lanka time). This inventory is based on the
 | Data preprocessing document | Complete | [Write-up PDF](final_package/reports/data_preprocessing.pdf) covers data preparation, labels, cleaning, features, and rationale. |
 | AI tool disclosure | Complete | [Disclosure PDF](final_package/reports/ai_tool_disclosure.pdf). |
 | Demo video, 3–5 minutes, unlisted on YouTube | Pending / not found in this repository | No Datathon video file or YouTube URL is present here. The `DEMO.mp4` in the parent workspace is outside this repository and is not identified as the Datathon demo. |
-| `DevOps_Datathon.zip` upload package | Complete; confirm registered team name | [ZIP archive](DevOps_Datathon.zip) contains 34 relevant files. ZIP integrity passed; all named file deliverables are present and no raw `Data` folder is included. |
+| `DevOps_Datathon.zip` upload package | Complete; confirm registered team name | [ZIP archive](DevOps_Datathon.zip) contains 31 relevant files. ZIP integrity passed; all named file deliverables and notebook dependencies are present, and no raw `Data` folder is included. |
 | Submission form upload | Not verifiable from local files | No upload receipt or submission confirmation is present in the repository. |
 
 ## Checks and limits
 
-- The recorded [final audit](reports/final_audit.json) passes the CSV schema, row order, value, model reload, and Task 2B validator checks. The [package audit](final_package/reports/package_audit.json) was rerun in the pinned dependency environment and passed file presence, CSV shapes, reproduction-cell presence, saved-model loading, and raw-data exclusion. The ZIP was reopened and its internal CRC integrity passed.
+- The recorded [final audit](reports/final_audit.json) passes the CSV schema, row order, value, model reload, and Task 2B validator checks. The local [package audit](final_package/reports/package_audit.json) was rerun in the pinned dependency environment and passed file presence, CSV shapes, reproduction-cell presence, saved-model loading, and raw-data exclusion. The package audit, generated baseline report, and packaging verifier are kept outside the ZIP; the ZIP was reopened and its internal CRC integrity passed.
 - The organiser's raw `Data` directory and official checker are not in this repository, so training, notebook execution, and the official Task 2B checker were not rerun here. The notebook's full run requires the organiser data alongside the package, as described in the [package README](final_package/README.md).
 - The booklet does not disclose an exact scoring metric for Task 1 or Task 2A. The validation figures above should not be presented as leaderboard results.
 - The Datathon is judged separately from the Hackathon. Integration with the `waypoint-logistics` application is not a required Datathon deliverable.
