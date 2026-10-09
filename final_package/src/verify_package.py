@@ -14,7 +14,7 @@ PACKAGE = Path(__file__).resolve().parent.parent
 
 def main() -> None:
     required = [
-        "TeamName_FinalNotebook.ipynb",
+        "DevOps_FinalNotebook.ipynb",
         "submission_task1.csv",
         "submission_task2a.csv",
         "submission_task2b.csv",
@@ -24,14 +24,18 @@ def main() -> None:
         "requirements.txt",
         "reports/final_audit.json",
         "reports/ai_tool_disclosure.md",
+        "reports/ai_tool_disclosure.pdf",
         "reports/architecture_diagrams.md",
+        "reports/architecture_diagrams.pdf",
         "reports/data_preprocessing.md",
+        "reports/data_preprocessing.pdf",
         "reports/demo_video_outline.md",
         "reports/task2b_prioritization_policy.md",
+        "reports/task2b_prioritization_policy.pdf",
     ]
     missing = [path for path in required if not (PACKAGE / path).is_file()]
 
-    notebook = json.loads((PACKAGE / "TeamName_FinalNotebook.ipynb").read_text(encoding="utf-8"))
+    notebook = json.loads((PACKAGE / "DevOps_FinalNotebook.ipynb").read_text(encoding="utf-8"))
     code_cells = [cell for cell in notebook["cells"] if cell["cell_type"] == "code"]
     notebook_errors = [
         output

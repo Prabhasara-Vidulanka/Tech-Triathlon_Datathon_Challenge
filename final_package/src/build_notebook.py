@@ -11,7 +11,7 @@ from jupyter_client import KernelManager
 
 SCRIPT_PACKAGE = Path(__file__).resolve().parent.parent
 WORK = SCRIPT_PACKAGE if (SCRIPT_PACKAGE / "models").is_dir() else Path(__file__).resolve().parents[2] / "work"
-NOTEBOOK = WORK / "TeamName_FinalNotebook.ipynb"
+NOTEBOOK = WORK / "DevOps_FinalNotebook.ipynb"
 
 
 def build() -> nbf.NotebookNode:
