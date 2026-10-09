@@ -11,7 +11,7 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "final_package"
-ARCHIVE = ROOT / "DevOps_Datathon.zip"
+ARCHIVE = ROOT / "submission_ready" / "DevOps_Datathon.zip"
 
 # The JSON reports listed here are read directly by the submitted notebook.
 FILES = (
@@ -62,6 +62,7 @@ def main() -> None:
     if missing_reports:
         raise AssertionError(f"Notebook report dependencies missing from ZIP: {sorted(missing_reports)}")
 
+    ARCHIVE.parent.mkdir(parents=True, exist_ok=True)
     with ZipFile(ARCHIVE, "w", compression=ZIP_DEFLATED, compresslevel=6) as archive:
         for name in FILES:
             archive.write(PACKAGE / name, name)

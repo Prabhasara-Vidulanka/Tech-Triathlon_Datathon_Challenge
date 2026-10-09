@@ -20,19 +20,19 @@ Status reviewed: 9 October 2026 (Sri Lanka time). This inventory is based on the
 | `submission_task2a.csv` | Complete | [Packaged CSV](final_package/submission_task2a.csv): 60 rows, required columns and identifiers checked. |
 | `submission_task2b.csv` | Complete | [Packaged CSV](final_package/submission_task2b.csv): 85 rows, official feasibility pass recorded. |
 | Written Task 2B priority and deferral policy | Complete | [Policy PDF](final_package/reports/task2b_prioritization_policy.pdf); editable [Markdown source](reports/task2b_prioritization_policy.md) remains outside the lean ZIP. |
-| Final notebook | Complete; confirm registered team name | [Packaged notebook](final_package/DevOps_FinalNotebook.ipynb): saved-result and final-inference cells are executed; four new full-reproduction cells are unexecuted because organiser data is absent from this clone. |
+| Final notebook | Complete; confirm registered team name | [Executed notebook](final_package/DevOps_FinalNotebook.ipynb): all 11 code cells executed with no errors, including label construction, preprocessing, training, evaluation, allocation, official validation, and final saved-model inference. |
 | Final model files | Complete | [Task 1 model](final_package/models/task1_models.pkl) and [Task 2A model](final_package/models/task2a_models.pkl). |
 | Architecture diagrams | Complete | [Diagram PDF](final_package/reports/architecture_diagrams.pdf) covers both models, preprocessing, Task 2B, and a proposed deployment approach. |
 | Data preprocessing document | Complete | [Write-up PDF](final_package/reports/data_preprocessing.pdf) covers data preparation, labels, cleaning, features, and rationale. |
 | AI tool disclosure | Complete | [Disclosure PDF](final_package/reports/ai_tool_disclosure.pdf). |
 | Demo video, 3–5 minutes, unlisted on YouTube | Pending / not found in this repository | No Datathon video file or YouTube URL is present here. The `DEMO.mp4` in the parent workspace is outside this repository and is not identified as the Datathon demo. |
-| `DevOps_Datathon.zip` upload package | Complete; confirm registered team name | [ZIP archive](DevOps_Datathon.zip) contains 31 relevant files. ZIP integrity passed; all named file deliverables and notebook dependencies are present, and no raw `Data` folder is included. |
+| `DevOps_Datathon.zip` upload package | Complete; confirm registered team name | [Submission-ready ZIP](submission_ready/DevOps_Datathon.zip) contains the fully executed notebook and 30 other relevant files. ZIP integrity passed, all named deliverables are present, and no raw `Data` folder is included. The [original ZIP](DevOps_Datathon.zip) remains unchanged as requested. |
 | Submission form upload | Not verifiable from local files | No upload receipt or submission confirmation is present in the repository. |
 
 ## Checks and limits
 
-- The recorded [final audit](reports/final_audit.json) passes the CSV schema, row order, value, model reload, and Task 2B validator checks. The local [package audit](final_package/reports/package_audit.json) was rerun in the pinned dependency environment and passed file presence, CSV shapes, reproduction-cell presence, saved-model loading, and raw-data exclusion. The package audit, generated baseline report, and packaging verifier are kept outside the ZIP; the ZIP was reopened and its internal CRC integrity passed.
-- The organiser's raw `Data` directory and official checker are not in this repository, so training, notebook execution, and the official Task 2B checker were not rerun here. The notebook's full run requires the organiser data alongside the package, as described in the [package README](final_package/README.md).
+- A fresh full run reproduced the submitted CSVs byte for byte and passed CSV schema, row order, value, model reload, and the official Task 2B feasibility checker. Its local `work/reports/final_audit.json` matches the [recorded final audit](reports/final_audit.json). The [package audit](final_package/reports/package_audit.json) passes file presence, CSV shapes, full notebook execution, saved-model loading, and raw-data exclusion. The new ZIP was reopened and its internal CRC integrity passed.
+- The organiser's raw `Data` directory is local to this workspace for reproduction and is excluded from both ZIP files. The original ZIP still contains the earlier notebook; use the submission-ready ZIP for the executed notebook.
 - The booklet does not disclose an exact scoring metric for Task 1 or Task 2A. The validation figures above should not be presented as leaderboard results.
 - The Datathon is judged separately from the Hackathon. Integration with the `waypoint-logistics` application is not a required Datathon deliverable.
 
@@ -40,6 +40,6 @@ Status reviewed: 9 October 2026 (Sri Lanka time). This inventory is based on the
 
 1. Confirm `DevOps` is the registered team name on the notebook and ZIP.
 2. Record a 3–5 minute Datathon walkthrough, upload it as an unlisted YouTube video, and include its URL in the submission form.
-3. Upload [DevOps_Datathon.zip](DevOps_Datathon.zip) through the organiser's submission form and retain the confirmation.
+3. Upload [submission_ready/DevOps_Datathon.zip](submission_ready/DevOps_Datathon.zip) through the organiser's submission form and retain the confirmation.
 
 The booklet states a deadline of **9 October 2026 at 11:59 PM Sri Lanka time**.

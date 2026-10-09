@@ -15,7 +15,7 @@ This package contains the deliverables for Task 1, Task 2A, and Task 2B.
 1. Extract this package next to the organiser-provided `Data` folder.
 2. Install the versions in `requirements.txt`.
 3. Start Jupyter in this extracted folder and open `DevOps_FinalNotebook.ipynb`.
-4. Run all cells. The final cell loads the saved model files and demonstrates representative predictions. Full reproduction cells are included before it and default to off. Set `RUN_FULL_REPRODUCTION = True` to regenerate labels, features, models, evaluation reports, and allocation in a separate `work` directory.
+4. The notebook is saved with all 11 code cells executed. Running all cells again repeats label construction, feature generation, model training, evaluation, and allocation in a separate `work` directory. The final cell loads the submitted model files and demonstrates inference without retraining inside that cell.
 
 Task 1 was trained with XGBoost 3.4.1 using CUDA. A compatible NVIDIA driver and CUDA-capable GPU are required only for retraining; loading the saved model and running inference can use the installed XGBoost package without retraining.
 
@@ -27,7 +27,7 @@ Task 1 was trained with XGBoost 3.4.1 using CUDA. A compatible NVIDIA driver and
 
 ## Quality checks
 
-`reports/final_audit.json` records the final automated checks. The official Task 2B validator result is: `FEASIBILITY: PASSED - every rule satisfied.`
+`reports/final_audit.json` records the submitted artifact checks. A fresh full notebook run also passed the official Task 2B validator and all quality gates; those regenerated outputs are in the sibling `work` directory.
 
 The competition booklet does not name an exact prediction metric for Task 1 or Task 2A. The notebook therefore reports multiple standard chronological metrics and does not present a surrogate metric as official.
 

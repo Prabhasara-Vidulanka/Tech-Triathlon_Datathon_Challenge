@@ -3,9 +3,9 @@
   "missing_files": [],
   "raw_data_excluded": true,
   "notebook_code_cells": 11,
-  "notebook_all_code_cells_executed": false,
+  "notebook_all_code_cells_executed": true,
   "notebook_reproduction_steps_present": true,
-  "notebook_unexecuted_reproduction_cells": 4,
+  "notebook_unexecuted_reproduction_cells": 0,
   "notebook_final_inference_executed": true,
   "notebook_error_outputs": 0,
   "task1_shape": [

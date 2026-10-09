@@ -27,6 +27,13 @@ def main() -> None:
                     "    finally:\n"
                     "        inference.WORK = original_inference_work",
                 )
+            if cell.cell_type == "code" and "evaluate_holdout()" in cell.source:
+                cell.source = cell.source.replace(
+                    "    evaluate_holdout()      # subgroup errors, diagnostics and feature importance\n"
+                    "    allocate_peak_day()     # Task 2B allocation and prioritization comparison",
+                    "    allocate_peak_day()     # Task 2B allocation and prioritization comparison\n"
+                    "    evaluate_holdout()      # subgroup errors, diagnostics and feature importance",
+                )
         nbformat.validate(notebook)
         nbformat.write(notebook, NOTEBOOK)
         print("Updated reproduction cells")
@@ -84,8 +91,8 @@ print("Full reproduction enabled:", RUN_FULL_REPRODUCTION)"""
     import inference
     from audit import main as validate_outputs
 
-    evaluate_holdout()      # subgroup errors, diagnostics and feature importance
     allocate_peak_day()     # Task 2B allocation and prioritization comparison
+    evaluate_holdout()      # subgroup errors, diagnostics and feature importance
     original_inference_work = inference.WORK
     inference.WORK = REPRO
     try:
