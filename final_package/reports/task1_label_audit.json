@@ -1,0 +1,195 @@
+{
+  "formula": {
+    "service_start": "max(actual_arrival, window_open)",
+    "service_min": "leave_outlet - service_start",
+    "late": "actual_arrival > window_close (strict inequality)"
+  },
+  "rows": 91894,
+  "early_arrivals": 4023,
+  "early_arrival_rate": 0.04377870154743509,
+  "window_cross_midnight_rows": 0,
+  "leave_before_arrival_raw_rows": 0,
+  "arrival_equal_close_rows": 279,
+  "late_rows": 17991,
+  "late_rate": 0.1957799203430039,
+  "service_summary": {
+    "count": 91894.0,
+    "mean": 19.00252464796396,
+    "std": 14.914796303467181,
+    "min": 2.0,
+    "0.1%": 4.0,
+    "1%": 5.0,
+    "5%": 7.0,
+    "50%": 15.0,
+    "95%": 44.0,
+    "99%": 80.0,
+    "99.9%": 149.0,
+    "max": 428.0
+  },
+  "service_over_180_min": 45,
+  "mall_rows": 1267,
+  "mall_window_matches_order_window": 1267,
+  "mall_window_mismatches": 0,
+  "group_summaries": {
+    "brand": {
+      "Fresh": {
+        "rows": 87457.0,
+        "late_rate": 0.20351715700286999,
+        "service_mean": 17.14379637993528,
+        "service_median": 15.0
+      },
+      "Style": {
+        "rows": 2733.0,
+        "late_rate": 0.054884742041712405,
+        "service_mean": 52.55653128430296,
+        "service_median": 46.0
+      },
+      "Tech": {
+        "rows": 1704.0,
+        "late_rate": 0.02464788732394366,
+        "service_mean": 60.58450704225352,
+        "service_median": 52.0
+      }
+    },
+    "depot": {
+      "Kandy": {
+        "rows": 35609.0,
+        "late_rate": 0.1947822179786009,
+        "service_mean": 18.3637563537308,
+        "service_median": 14.0
+      },
+      "Peliyagoda": {
+        "rows": 56285.0,
+        "late_rate": 0.1964111219685529,
+        "service_mean": 19.406644754375055,
+        "service_median": 16.0
+      }
+    },
+    "district": {
+      "Badulla": {
+        "rows": 4614.0,
+        "late_rate": 0.40983961855223233,
+        "service_mean": 18.944733420026008,
+        "service_median": 15.0
+      },
+      "Colombo": {
+        "rows": 16048.0,
+        "late_rate": 0.19497756729810567,
+        "service_mean": 20.381044366899303,
+        "service_median": 16.0
+      },
+      "Galle": {
+        "rows": 6927.0,
+        "late_rate": 0.21365670564457917,
+        "service_mean": 21.773928107405805,
+        "service_median": 18.0
+      },
+      "Gampaha": {
+        "rows": 11535.0,
+        "late_rate": 0.17355873428695276,
+        "service_mean": 20.504464672735153,
+        "service_median": 16.0
+      },
+      "Kalutara": {
+        "rows": 8036.0,
+        "late_rate": 0.24763563962170235,
+        "service_mean": 19.908287705326032,
+        "service_median": 17.0
+      },
+      "Kandy": {
+        "rows": 14075.0,
+        "late_rate": 0.07673179396092362,
+        "service_mean": 15.8846891651865,
+        "service_median": 12.0
+      },
+      "Kegalle": {
+        "rows": 4503.0,
+        "late_rate": 0.20208749722407285,
+        "service_mean": 25.383966244725737,
+        "service_median": 20.0
+      },
+      "Kurunegala": {
+        "rows": 5848.0,
+        "late_rate": 0.15355677154582764,
+        "service_mean": 15.663645690834473,
+        "service_median": 13.0
+      },
+      "Matale": {
+        "rows": 6822.0,
+        "late_rate": 0.14731750219876869,
+        "service_mean": 20.056141893872766,
+        "service_median": 17.0
+      },
+      "Matara": {
+        "rows": 4597.0,
+        "late_rate": 0.15705895149010224,
+        "service_mean": 19.05438329345225,
+        "service_median": 16.0
+      },
+      "Nuwara Eliya": {
+        "rows": 5595.0,
+        "late_rate": 0.36639857015192134,
+        "service_mean": 16.407506702412867,
+        "service_median": 14.0
+      },
+      "Puttalam": {
+        "rows": 3294.0,
+        "late_rate": 0.25318761384335153,
+        "service_mean": 11.749848208864602,
+        "service_median": 11.0
+      }
+    },
+    "dow": {
+      "0": {
+        "rows": 14576.0,
+        "late_rate": 0.1942919868276619,
+        "service_mean": 17.712060922063667,
+        "service_median": 15.0
+      },
+      "1": {
+        "rows": 14829.0,
+        "late_rate": 0.1683862701463349,
+        "service_mean": 14.730797761143705,
+        "service_median": 12.0
+      },
+      "2": {
+        "rows": 15992.0,
+        "late_rate": 0.17702601300650325,
+        "service_mean": 17.43653076538269,
+        "service_median": 14.0
+      },
+      "3": {
+        "rows": 16374.0,
+        "late_rate": 0.19769146207401977,
+        "service_mean": 22.558568462196163,
+        "service_median": 17.0
+      },
+      "4": {
+        "rows": 14839.0,
+        "late_rate": 0.1975874385066379,
+        "service_mean": 22.5648628613788,
+        "service_median": 17.0
+      },
+      "5": {
+        "rows": 15284.0,
+        "late_rate": 0.23959696414551165,
+        "service_mean": 18.748037163046323,
+        "service_median": 16.0
+      }
+    },
+    "monsoon": {
+      "0": {
+        "rows": 49092.0,
+        "late_rate": 0.12804530269697711,
+        "service_mean": 17.26564409679785,
+        "service_median": 14.0
+      },
+      "1": {
+        "rows": 42802.0,
+        "late_rate": 0.2734685295079669,
+        "service_mean": 20.994649782720433,
+        "service_median": 17.0
+      }
+    }
+  }
+}

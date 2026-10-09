@@ -1,0 +1,131 @@
+{
+  "pseudo_test_period": [
+    "2026-01-05",
+    "2026-02-14"
+  ],
+  "service_metrics": {
+    "mae": 3.8149381662149966,
+    "rmse": 5.997750287861449,
+    "median_ae": 2.670951009486254,
+    "bias": 0.12317476774292858
+  },
+  "late_metrics": {
+    "log_loss": 0.13952411337368933,
+    "brier": 0.04319671073178815,
+    "roc_auc": 0.972303722943723,
+    "pr_auc": 0.85469930391584,
+    "calibration_error": 0.006505030455751423,
+    "mean_probability": 0.12850563011895677,
+    "positive_rate": 0.13108242303872888
+  },
+  "top_service_features": [
+    {
+      "feature": "outlet_id",
+      "service_importance_mean": 5.32378546698134
+    },
+    {
+      "feature": "festival_ramp",
+      "service_importance_mean": 1.6426725930558743
+    },
+    {
+      "feature": "order_units",
+      "service_importance_mean": 0.959112838696655
+    },
+    {
+      "feature": "is_payday",
+      "service_importance_mean": 0.27401543037516873
+    },
+    {
+      "feature": "dow",
+      "service_importance_mean": 0.2638623304354084
+    },
+    {
+      "feature": "order_weight_kg",
+      "service_importance_mean": 0.16113151704088735
+    },
+    {
+      "feature": "order_volume_m3",
+      "service_importance_mean": 0.13280476520827955
+    },
+    {
+      "feature": "planned_margin_to_close_min",
+      "service_importance_mean": 0.06502373088335855
+    },
+    {
+      "feature": "vehicle_weight_load_ratio",
+      "service_importance_mean": 0.03172371232210636
+    },
+    {
+      "feature": "planned_arrival_min",
+      "service_importance_mean": 0.0276234596307392
+    },
+    {
+      "feature": "order_volume_per_allowance",
+      "service_importance_mean": 0.0249775225665958
+    },
+    {
+      "feature": "weight_per_unit",
+      "service_importance_mean": 0.023806584795781793
+    }
+  ],
+  "top_late_features": [
+    {
+      "feature": "planned_margin_to_close_min",
+      "late_importance_mean": 0.19525761244552692
+    },
+    {
+      "feature": "outlet_id",
+      "late_importance_mean": 0.09872981854759183
+    },
+    {
+      "feature": "disruption_index",
+      "late_importance_mean": 0.04273678006678357
+    },
+    {
+      "feature": "festival_ramp",
+      "late_importance_mean": 0.04080126811966488
+    },
+    {
+      "feature": "seq_in_route",
+      "late_importance_mean": 0.014068166127133436
+    },
+    {
+      "feature": "dow",
+      "late_importance_mean": 0.012112434386746737
+    },
+    {
+      "feature": "planned_arrival_min",
+      "late_importance_mean": 0.008699411242583208
+    },
+    {
+      "feature": "route_total_planned_travel_min",
+      "late_importance_mean": 0.00813980650904167
+    },
+    {
+      "feature": "distance_congestion",
+      "late_importance_mean": 0.006101889598003979
+    },
+    {
+      "feature": "vehicle_id",
+      "late_importance_mean": 0.005864157706400905
+    },
+    {
+      "feature": "planned_from_window_mid_min",
+      "late_importance_mean": 0.003518537332290045
+    },
+    {
+      "feature": "planned_arrival_sin",
+      "late_importance_mean": 0.0023603804427848735
+    }
+  ],
+  "largest_error_summary": {
+    "count": 100.0,
+    "mean": 25.892139345497288,
+    "std": 12.985226382516144,
+    "min": 15.93139382543151,
+    "25%": 18.18668381742142,
+    "50%": 22.163303754613537,
+    "75%": 29.439201609581247,
+    "max": 115.06870393107167
+  }
+}

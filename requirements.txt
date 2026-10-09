@@ -1,0 +1,9 @@
+joblib==1.5.3
+jupyter-client==8.8.0
+matplotlib==3.10.9
+nbformat==5.10.4
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
+scipy==1.17.1
+xgboost==3.4.1

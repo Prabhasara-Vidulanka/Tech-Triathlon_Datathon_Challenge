@@ -1,0 +1,841 @@
+{
+  "runtime": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4",
+    "sklearn": "1.8.0"
+  },
+  "files": [
+    {
+      "path": "Data\\General Data\\calendar.csv",
+      "rows": 910,
+      "columns": [
+        "date",
+        "dow",
+        "dow_name",
+        "is_weekend",
+        "iso_year",
+        "iso_week",
+        "is_payday",
+        "festival",
+        "festival_ramp",
+        "is_holiday",
+        "monsoon",
+        "is_operating"
+      ],
+      "dtypes": {
+        "date": "str",
+        "dow": "int64",
+        "dow_name": "str",
+        "is_weekend": "int64",
+        "iso_year": "int64",
+        "iso_week": "int64",
+        "is_payday": "int64",
+        "festival": "str",
+        "festival_ramp": "float64",
+        "is_holiday": "int64",
+        "monsoon": "int64",
+        "is_operating": "int64"
+      },
+      "missing": {
+        "festival": 892
+      },
+      "duplicate_rows": 0,
+      "sha256": "2201b18787287dc9621cde516c22ac7ce656da76ff0ccc956e1325a7b2fc3113",
+      "date_ranges": {
+        "date": {
+          "min": "2024-01-01",
+          "max": "2026-06-28",
+          "unparsed_nonmissing": 0
+        }
+      }
+    },
+    {
+      "path": "Data\\General Data\\district_travel.csv",
+      "rows": 12,
+      "columns": [
+        "district",
+        "depot",
+        "road_class",
+        "free_flow_kmh",
+        "depot_to_district_km",
+        "depot_to_district_freeflow_min",
+        "inter_stop_km",
+        "inter_stop_freeflow_min"
+      ],
+      "dtypes": {
+        "district": "str",
+        "depot": "str",
+        "road_class": "str",
+        "free_flow_kmh": "float64",
+        "depot_to_district_km": "int64",
+        "depot_to_district_freeflow_min": "int64",
+        "inter_stop_km": "float64",
+        "inter_stop_freeflow_min": "int64"
+      },
+      "missing": {},
+      "duplicate_rows": 0,
+      "sha256": "ac31c4d7a8adcbf8e020bec42d9037bc6ece0fc2cabbf116269710dbe2d239c5"
+    },
+    {
+      "path": "Data\\General Data\\outlets.csv",
+      "rows": 120,
+      "columns": [
+        "outlet_id",
+        "brand",
+        "district",
+        "depot",
+        "dock_type",
+        "parking_constraint",
+        "mall_window",
+        "window_open_time",
+        "window_close_time"
+      ],
+      "dtypes": {
+        "outlet_id": "str",
+        "brand": "str",
+        "district": "str",
+        "depot": "str",
+        "dock_type": "str",
+        "parking_constraint": "str",
+        "mall_window": "str",
+        "window_open_time": "str",
+        "window_close_time": "str"
+      },
+      "missing": {
+        "mall_window": 108
+      },
+      "duplicate_rows": 0,
+      "sha256": "206a915f16c9b522473d4ad314d1c7c435345911427d9e0878d6e66241c32c42",
+      "keys": {
+        "outlet_id": {
+          "unique": 120,
+          "duplicates": 0
+        }
+      }
+    },
+    {
+      "path": "Data\\General Data\\road_conditions.csv",
+      "rows": 10920,
+      "columns": [
+        "district",
+        "date",
+        "disruption_index"
+      ],
+      "dtypes": {
+        "district": "str",
+        "date": "str",
+        "disruption_index": "int64"
+      },
+      "missing": {},
+      "duplicate_rows": 0,
+      "sha256": "c54657447feaa1087d123523787e0643c19922439c94ead3c39792f2be32906f",
+      "date_ranges": {
+        "date": {
+          "min": "2024-01-01",
+          "max": "2026-06-28",
+          "unparsed_nonmissing": 0
+        }
+      }
+    },
+    {
+      "path": "Data\\General Data\\service_allowance.csv",
+      "rows": 9,
+      "columns": [
+        "brand",
+        "dock_type",
+        "service_allowance_min"
+      ],
+      "dtypes": {
+        "brand": "str",
+        "dock_type": "str",
+        "service_allowance_min": "int64"
+      },
+      "missing": {},
+      "duplicate_rows": 0,
+      "sha256": "9b0fe764a50e663ef293a4cb1f9b104ce71b77a3afc863db08228f6e497590a9"
+    },
+    {
+      "path": "Data\\General Data\\traffic_speed.csv",
+      "rows": 576,
+      "columns": [
+        "district",
+        "hour",
+        "monsoon",
+        "speed_index"
+      ],
+      "dtypes": {
+        "district": "str",
+        "hour": "int64",
+        "monsoon": "int64",
+        "speed_index": "int64"
+      },
+      "missing": {},
+      "duplicate_rows": 0,
+      "sha256": "2b841682af4dc38a73ea6765a40ac4e060af124d772039ab6d8e81ba2e997bd7"
+    },
+    {
+      "path": "Data\\General Data\\vehicles.csv",
+      "rows": 60,
+      "columns": [
+        "vehicle_id",
+        "type",
+        "temp",
+        "weight_cap_kg",
+        "volume_cap_m3",
+        "fuel_type",
+        "km_per_l",
+        "weekly_fuel_quota_l",
+        "depot"
+      ],
+      "dtypes": {
+        "vehicle_id": "str",
+        "type": "str",
+        "temp": "str",
+        "weight_cap_kg": "int64",
+        "volume_cap_m3": "float64",
+        "fuel_type": "str",
+        "km_per_l": "float64",
+        "weekly_fuel_quota_l": "int64",
+        "depot": "str"
+      },
+      "missing": {},
+      "duplicate_rows": 0,
+      "sha256": "f70175f786574f4c4d07480df263b5ba59918bcecd7a91e5c59d3f7a75b52b1f",
+      "keys": {
+        "vehicle_id": {
+          "unique": 60,
+          "duplicates": 0
+        }
+      }
+    },
+    {
+      "path": "Data\\Submission Templates\\submission_task1.csv",
+      "rows": 5014,
+      "columns": [
+        "delivery_id",
+        "pred_service_min",
+        "pred_late_prob"
+      ],
+      "dtypes": {
+        "delivery_id": "str",
+        "pred_service_min": "float64",
+        "pred_late_prob": "float64"
+      },
+      "missing": {
+        "pred_service_min": 5014,
+        "pred_late_prob": 5014
+      },
+      "duplicate_rows": 0,
+      "sha256": "cdf6d73c6d629af57cb2576fa6f5d7ead4aae9cc9be8a19399789839f29b4903",
+      "keys": {
+        "delivery_id": {
+          "unique": 5014,
+          "duplicates": 0
+        }
+      }
+    },
+    {
+      "path": "Data\\Submission Templates\\submission_task2a.csv",
+      "rows": 60,
+      "columns": [
+        "row_id",
+        "pred_total_volume_m3",
+        "pred_chilled_volume_m3"
+      ],
+      "dtypes": {
+        "row_id": "str",
+        "pred_total_volume_m3": "float64",
+        "pred_chilled_volume_m3": "float64"
+      },
+      "missing": {
+        "pred_total_volume_m3": 60,
+        "pred_chilled_volume_m3": 60
+      },
+      "duplicate_rows": 0,
+      "sha256": "b39825cd796c36cadee44301fdb92b7d4639976f49744cb5d39dfdf69d5b7086",
+      "keys": {
+        "row_id": {
+          "unique": 60,
+          "duplicates": 0
+        }
+      }
+    },
+    {
+      "path": "Data\\Submission Templates\\submission_task2b.csv",
+      "rows": 85,
+      "columns": [
+        "scenario",
+        "order_ref",
+        "outlet_id",
+        "decision",
+        "vehicle_id",
+        "trip_id"
+      ],
+      "dtypes": {
+        "scenario": "str",
+        "order_ref": "str",
+        "outlet_id": "str",
+        "decision": "str",
+        "vehicle_id": "str",
+        "trip_id": "str"
+      },
+      "missing": {},
+      "duplicate_rows": 0,
+      "sha256": "44951a07e904d13d7280ec396bb5b281c2bf07dbb18715e3ea4d4ad05f74317c",
+      "keys": {
+        "vehicle_id": {
+          "unique": 1,
+          "duplicates": 85
+        },
+        "outlet_id": {
+          "unique": 59,
+          "duplicates": 52
+        },
+        "order_ref": {
+          "unique": 85,
+          "duplicates": 0
+        }
+      }
+    },
+    {
+      "path": "Data\\Test Data\\route_legs_test.csv",
+      "rows": 5014,
+      "columns": [
+        "leg_id",
+        "date",
+        "route_id",
+        "depot",
+        "vehicle_id",
+        "vehicle_type",
+        "vehicle_temp",
+        "brand",
+        "district",
+        "seq",
+        "from_point",
+        "to_outlet",
+        "distance_km",
+        "planned_depart_time",
+        "planned_travel_duration_min",
+        "planned_arrival_time",
+        "monsoon",
+        "dow"
+      ],
+      "dtypes": {
+        "leg_id": "str",
+        "date": "str",
+        "route_id": "str",
+        "depot": "str",
+        "vehicle_id": "str",
+        "vehicle_type": "str",
+        "vehicle_temp": "str",
+        "brand": "str",
+        "district": "str",
+        "seq": "int64",
+        "from_point": "str",
+        "to_outlet": "str",
+        "distance_km": "float64",
+        "planned_depart_time": "str",
+        "planned_travel_duration_min": "int64",
+        "planned_arrival_time": "str",
+        "monsoon": "int64",
+        "dow": "int64"
+      },
+      "missing": {},
+      "duplicate_rows": 0,
+      "sha256": "3bc4943e69f466d94b3d2bc1b13f6422001dcee40ec77ac055a26713b08f1fc9",
+      "date_ranges": {
+        "date": {
+          "min": "2026-02-16",
+          "max": "2026-03-28",
+          "unparsed_nonmissing": 0
+        }
+      },
+      "keys": {
+        "leg_id": {
+          "unique": 5014,
+          "duplicates": 0
+        },
+        "vehicle_id": {
+          "unique": 39,
+          "duplicates": 5013
+        }
+      }
+    },
+    {
+      "path": "Data\\Test Data\\task1_test_inputs.csv",
+      "rows": 5014,
+      "columns": [
+        "delivery_id",
+        "order_date",
+        "dispatch_date",
+        "dispatch_status",
+        "outlet_id",
+        "brand",
+        "district",
+        "depot",
+        "temp_requirement",
+        "order_units",
+        "order_weight_kg",
+        "order_volume_m3",
+        "route_id",
+        "seq_in_route",
+        "vehicle_id",
+        "vehicle_type",
+        "vehicle_temp",
+        "planned_arrival_time",
+        "window_open_time",
+        "window_close_time"
+      ],
+      "dtypes": {
+        "delivery_id": "str",
+        "order_date": "str",
+        "dispatch_date": "str",
+        "dispatch_status": "str",
+        "outlet_id": "str",
+        "brand": "str",
+        "district": "str",
+        "depot": "str",
+        "temp_requirement": "str",
+        "order_units": "int64",
+        "order_weight_kg": "float64",
+        "order_volume_m3": "float64",
+        "route_id": "str",
+        "seq_in_route": "int64",
+        "vehicle_id": "str",
+        "vehicle_type": "str",
+        "vehicle_temp": "str",
+        "planned_arrival_time": "str",
+        "window_open_time": "str",
+        "window_close_time": "str"
+      },
+      "missing": {},
+      "duplicate_rows": 0,
+      "sha256": "23912f8c297a897717075a37d77dd42b57d94d1633b012b5dde324a5f7fa5593",
+      "date_ranges": {
+        "order_date": {
+          "min": "2026-02-16",
+          "max": "2026-03-28",
+          "unparsed_nonmissing": 0
+        },
+        "dispatch_date": {
+          "min": "2026-02-16",
+          "max": "2026-03-28",
+          "unparsed_nonmissing": 0
+        }
+      },
+      "keys": {
+        "delivery_id": {
+          "unique": 5014,
+          "duplicates": 0
+        },
+        "vehicle_id": {
+          "unique": 39,
+          "duplicates": 5013
+        },
+        "outlet_id": {
+          "unique": 120,
+          "duplicates": 5014
+        }
+      }
+    },
+    {
+      "path": "Data\\Test Data\\task2a_test_inputs.csv",
+      "rows": 60,
+      "columns": [
+        "row_id",
+        "depot",
+        "brand",
+        "iso_year",
+        "iso_week"
+      ],
+      "dtypes": {
+        "row_id": "str",
+        "depot": "str",
+        "brand": "str",
+        "iso_year": "int64",
+        "iso_week": "int64"
+      },
+      "missing": {},
+      "duplicate_rows": 0,
+      "sha256": "eeddce2128698a5cff992a5a2b5e9e5324323ee4903b7c4e5ae9d5660e4edebb",
+      "keys": {
+        "row_id": {
+          "unique": 60,
+          "duplicates": 0
+        }
+      }
+    },
+    {
+      "path": "Data\\Test Data\\task2b_peak_day_fleet.csv",
+      "rows": 38,
+      "columns": [
+        "scenario",
+        "vehicle_id",
+        "status"
+      ],
+      "dtypes": {
+        "scenario": "str",
+        "vehicle_id": "str",
+        "status": "str"
+      },
+      "missing": {},
+      "duplicate_rows": 0,
+      "sha256": "b3c3b81ec18772b86a871e468c9daaaed6048b46d8ff223b7c114f3268c51427",
+      "keys": {
+        "vehicle_id": {
+          "unique": 38,
+          "duplicates": 0
+        }
+      }
+    },
+    {
+      "path": "Data\\Test Data\\task2b_peak_day_scenarios.csv",
+      "rows": 85,
+      "columns": [
+        "scenario",
+        "order_ref",
+        "outlet_id",
+        "brand",
+        "district",
+        "depot",
+        "dock_type",
+        "parking_constraint",
+        "mall_window",
+        "window_open_time",
+        "window_close_time",
+        "temp_requirement",
+        "order_units",
+        "order_weight_kg",
+        "order_volume_m3",
+        "deferred_yesterday",
+        "days_since_last_served"
+      ],
+      "dtypes": {
+        "scenario": "str",
+        "order_ref": "str",
+        "outlet_id": "str",
+        "brand": "str",
+        "district": "str",
+        "depot": "str",
+        "dock_type": "str",
+        "parking_constraint": "str",
+        "mall_window": "str",
+        "window_open_time": "str",
+        "window_close_time": "str",
+        "temp_requirement": "str",
+        "order_units": "int64",
+        "order_weight_kg": "float64",
+        "order_volume_m3": "float64",
+        "deferred_yesterday": "int64",
+        "days_since_last_served": "int64"
+      },
+      "missing": {
+        "mall_window": 83
+      },
+      "duplicate_rows": 0,
+      "sha256": "1abdd311eeac9eee8f403a2653bbf81758759635c38ee9bd4b16e67562116799",
+      "keys": {
+        "outlet_id": {
+          "unique": 59,
+          "duplicates": 52
+        },
+        "order_ref": {
+          "unique": 85,
+          "duplicates": 0
+        }
+      }
+    },
+    {
+      "path": "Data\\Training Data\\deliveries_train.csv",
+      "rows": 92307,
+      "columns": [
+        "delivery_id",
+        "order_date",
+        "dispatch_date",
+        "dispatch_status",
+        "outlet_id",
+        "brand",
+        "district",
+        "depot",
+        "temp_requirement",
+        "order_units",
+        "order_weight_kg",
+        "order_volume_m3",
+        "route_id",
+        "seq_in_route",
+        "vehicle_id",
+        "vehicle_type",
+        "vehicle_temp",
+        "planned_arrival_time",
+        "window_open_time",
+        "window_close_time"
+      ],
+      "dtypes": {
+        "delivery_id": "str",
+        "order_date": "str",
+        "dispatch_date": "str",
+        "dispatch_status": "str",
+        "outlet_id": "str",
+        "brand": "str",
+        "district": "str",
+        "depot": "str",
+        "temp_requirement": "str",
+        "order_units": "int64",
+        "order_weight_kg": "float64",
+        "order_volume_m3": "float64",
+        "route_id": "str",
+        "seq_in_route": "float64",
+        "vehicle_id": "str",
+        "vehicle_type": "str",
+        "vehicle_temp": "str",
+        "planned_arrival_time": "str",
+        "window_open_time": "str",
+        "window_close_time": "str"
+      },
+      "missing": {
+        "dispatch_date": 413,
+        "route_id": 413,
+        "seq_in_route": 413,
+        "vehicle_id": 413,
+        "vehicle_type": 413,
+        "vehicle_temp": 413,
+        "planned_arrival_time": 413
+      },
+      "duplicate_rows": 0,
+      "sha256": "eb6bed3914d43f073c372a5c7624d3650cbe10c22462b54be7ad2c9ed5033619",
+      "date_ranges": {
+        "order_date": {
+          "min": "2024-01-01",
+          "max": "2026-02-14",
+          "unparsed_nonmissing": 0
+        },
+        "dispatch_date": {
+          "min": "2024-01-01",
+          "max": "2026-02-14",
+          "unparsed_nonmissing": 0
+        }
+      },
+      "keys": {
+        "delivery_id": {
+          "unique": 92307,
+          "duplicates": 0
+        },
+        "vehicle_id": {
+          "unique": 44,
+          "duplicates": 92305
+        },
+        "outlet_id": {
+          "unique": 120,
+          "duplicates": 92307
+        }
+      }
+    },
+    {
+      "path": "Data\\Training Data\\route_legs_train.csv",
+      "rows": 91894,
+      "columns": [
+        "leg_id",
+        "date",
+        "route_id",
+        "depot",
+        "vehicle_id",
+        "vehicle_type",
+        "vehicle_temp",
+        "brand",
+        "district",
+        "seq",
+        "from_point",
+        "to_outlet",
+        "distance_km",
+        "planned_depart_time",
+        "planned_travel_duration_min",
+        "planned_arrival_time",
+        "actual_depart_time",
+        "actual_travel_duration_min",
+        "arrival_time",
+        "leave_outlet_time",
+        "monsoon",
+        "dow"
+      ],
+      "dtypes": {
+        "leg_id": "str",
+        "date": "str",
+        "route_id": "str",
+        "depot": "str",
+        "vehicle_id": "str",
+        "vehicle_type": "str",
+        "vehicle_temp": "str",
+        "brand": "str",
+        "district": "str",
+        "seq": "int64",
+        "from_point": "str",
+        "to_outlet": "str",
+        "distance_km": "float64",
+        "planned_depart_time": "str",
+        "planned_travel_duration_min": "int64",
+        "planned_arrival_time": "str",
+        "actual_depart_time": "str",
+        "actual_travel_duration_min": "int64",
+        "arrival_time": "str",
+        "leave_outlet_time": "str",
+        "monsoon": "int64",
+        "dow": "int64"
+      },
+      "missing": {},
+      "duplicate_rows": 0,
+      "sha256": "70296c44c4ba694cf264aec236d07f426141fee6f3552bfd18523cb416e40280",
+      "date_ranges": {
+        "date": {
+          "min": "2024-01-01",
+          "max": "2026-02-14",
+          "unparsed_nonmissing": 0
+        }
+      },
+      "keys": {
+        "leg_id": {
+          "unique": 91894,
+          "duplicates": 0
+        },
+        "vehicle_id": {
+          "unique": 44,
+          "duplicates": 91892
+        }
+      }
+    }
+  ],
+  "joins": {
+    "status_counts": {
+      "attempted": 90351,
+      "deferred": 1543,
+      "not_run": 413
+    },
+    "attempted_rows": 90351,
+    "deferred_rows": 1543,
+    "dispatched_rows": 91894,
+    "train_leg_key_duplicate_rows": 0,
+    "train_dispatched_unmatched": 0,
+    "train_consistency_mismatches": {
+      "outlet": 0,
+      "vehicle": 0,
+      "brand": 0,
+      "district": 0,
+      "depot": 0,
+      "dispatch_date_vs_leg_date": 0
+    },
+    "test_order_rows": 5014,
+    "test_leg_rows": 5014,
+    "test_leg_key_duplicate_rows": 0,
+    "test_unmatched": 0,
+    "test_outlet_mismatches": 0
+  },
+  "distribution": {
+    "brand": {
+      "train_unique": 3,
+      "test_unique": 3,
+      "unseen_in_test": [],
+      "missing_from_test": []
+    },
+    "district": {
+      "train_unique": 12,
+      "test_unique": 12,
+      "unseen_in_test": [],
+      "missing_from_test": []
+    },
+    "depot": {
+      "train_unique": 2,
+      "test_unique": 2,
+      "unseen_in_test": [],
+      "missing_from_test": []
+    },
+    "temp_requirement": {
+      "train_unique": 2,
+      "test_unique": 2,
+      "unseen_in_test": [],
+      "missing_from_test": []
+    },
+    "vehicle_type": {
+      "train_unique": 2,
+      "test_unique": 2,
+      "unseen_in_test": [],
+      "missing_from_test": []
+    },
+    "vehicle_temp": {
+      "train_unique": 2,
+      "test_unique": 2,
+      "unseen_in_test": [],
+      "missing_from_test": []
+    },
+    "outlet_id": {
+      "train_unique": 120,
+      "test_unique": 120,
+      "unseen_in_test": [],
+      "missing_from_test": []
+    },
+    "vehicle_id": {
+      "train_unique": 44,
+      "test_unique": 39,
+      "unseen_in_test": [],
+      "missing_from_test": [
+        "VEH009",
+        "VEH020",
+        "VEH028",
+        "VEH050",
+        "VEH055"
+      ]
+    },
+    "numeric": {
+      "order_units": {
+        "train_mean": 48.790200093167364,
+        "test_mean": 50.58456322297567,
+        "train_p99": 146.0,
+        "test_p99": 146.60999999999967
+      },
+      "order_weight_kg": {
+        "train_mean": 358.89713997854983,
+        "test_mean": 371.10979258077384,
+        "train_p99": 1130.1820000000007,
+        "test_p99": 1144.5469999999982
+      },
+      "order_volume_m3": {
+        "train_mean": 2.075680869273186,
+        "test_mean": 2.147451934583167,
+        "train_p99": 9.976940000000003,
+        "test_p99": 10.571869999999999
+      },
+      "seq_in_route": {
+        "train_mean": 1.8963697303414804,
+        "test_mean": 1.854607100119665,
+        "train_p99": 7.0,
+        "test_p99": 7.0
+      }
+    }
+  },
+  "templates": {
+    "task1_columns": [
+      "delivery_id",
+      "pred_service_min",
+      "pred_late_prob"
+    ],
+    "task1_row_count_match": true,
+    "task1_order_match": true,
+    "task2a_columns": [
+      "row_id",
+      "pred_total_volume_m3",
+      "pred_chilled_volume_m3"
+    ],
+    "task2a_row_count_match": true,
+    "task2a_order_match": true,
+    "task2b_columns": [
+      "scenario",
+      "order_ref",
+      "outlet_id",
+      "decision",
+      "vehicle_id",
+      "trip_id"
+    ],
+    "task2b_row_count_match": true,
+    "task2b_order_match": true
+  }
+}

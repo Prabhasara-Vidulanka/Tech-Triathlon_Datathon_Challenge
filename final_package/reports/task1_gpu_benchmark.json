@@ -1,0 +1,225 @@
+{
+  "xgboost_version": "3.4.1",
+  "build_info": {
+    "BUILTIN_PREFETCH_PRESENT": false,
+    "CUDA_VERSION": [
+      13,
+      3
+    ],
+    "DEBUG": false,
+    "MM_PREFETCH_PRESENT": true,
+    "THRUST_VERSION": [
+      3,
+      3,
+      3
+    ],
+    "USE_CUDA": true,
+    "USE_DLOPEN_NCCL": false,
+    "USE_FEDERATED": false,
+    "USE_NCCL": false,
+    "USE_NVCOMP": false,
+    "USE_OPENMP": true,
+    "USE_RMM": false,
+    "libxgboost": "C:\\Users\\prabh\\AppData\\Roaming\\Python\\Python314\\site-packages\\xgboost\\lib\\xgboost.dll"
+  },
+  "cuda_training_confirmed": true,
+  "validation_folds": [
+    {
+      "train_start": "2024-01-01",
+      "train_end": "2025-11-22",
+      "valid_start": "2025-11-24",
+      "valid_end": "2026-01-03",
+      "train_rows": 81967,
+      "valid_rows": 4892
+    },
+    {
+      "train_start": "2024-01-01",
+      "train_end": "2026-01-03",
+      "valid_start": "2026-01-05",
+      "valid_end": "2026-02-14",
+      "train_rows": 86859,
+      "valid_rows": 5035
+    }
+  ],
+  "scores": {
+    "service": {
+      "xgb_depth6": {
+        "folds": [
+          {
+            "mae": 4.300585688866267,
+            "rmse": 7.807389694099435,
+            "median_ae": 2.778731346130371,
+            "bias": -0.7690695338042565
+          },
+          {
+            "mae": 3.7876303895346104,
+            "rmse": 5.911675618668905,
+            "median_ae": 2.6503124237060547,
+            "bias": 0.029187973158835416
+          }
+        ],
+        "mean_mae": 4.044108039200439,
+        "latest_mae": 3.7876303895346104
+      },
+      "xgb_lossguide": {
+        "folds": [
+          {
+            "mae": 4.3085900926239065,
+            "rmse": 7.891921227817067,
+            "median_ae": 2.7724242210388184,
+            "bias": -0.8299662259788856
+          },
+          {
+            "mae": 3.84075520012561,
+            "rmse": 6.028198265627229,
+            "median_ae": 2.690558433532715,
+            "bias": 0.154069687616979
+          }
+        ],
+        "mean_mae": 4.074672646374758,
+        "latest_mae": 3.84075520012561
+      },
+      "cpu_existing": {
+        "folds": [
+          {
+            "mae": 4.307847726468221,
+            "rmse": 7.8048695327245685,
+            "median_ae": 2.796152078984548,
+            "bias": -0.737086837202841
+          },
+          {
+            "mae": 3.8130268122274904,
+            "rmse": 5.981068804180127,
+            "median_ae": 2.680364133744046,
+            "bias": 0.094518887435951
+          }
+        ],
+        "mean_mae": 4.060437269347856,
+        "latest_mae": 3.8130268122274904,
+        "note": "Saved benchmark only; no CPU retraining in this run"
+      }
+    },
+    "late": {
+      "xgb_depth6": {
+        "folds": [
+          {
+            "log_loss": 0.14907527919859723,
+            "brier": 0.046151574701070786,
+            "roc_auc": 0.9751284800421679,
+            "pr_auc": 0.8942750686428752,
+            "calibration_error": 0.005492660809477126,
+            "mean_probability": 0.16956602036952972,
+            "positive_rate": 0.16762060506950122
+          },
+          {
+            "log_loss": 0.1382672379498677,
+            "brier": 0.04321468621492386,
+            "roc_auc": 0.9730590476190476,
+            "pr_auc": 0.855847777520544,
+            "calibration_error": 0.006582717703868558,
+            "mean_probability": 0.12749624252319336,
+            "positive_rate": 0.13108242303872888
+          }
+        ],
+        "mean_log_loss": 0.14367125857423246,
+        "latest_log_loss": 0.1382672379498677
+      },
+      "xgb_lossguide": {
+        "folds": [
+          {
+            "log_loss": 0.14690513254435095,
+            "brier": 0.045448582619428635,
+            "roc_auc": 0.9759302074847861,
+            "pr_auc": 0.8980958933089703,
+            "calibration_error": 0.00692961676424359,
+            "mean_probability": 0.1707131713628769,
+            "positive_rate": 0.16762060506950122
+          },
+          {
+            "log_loss": 0.13799474061682945,
+            "brier": 0.043059900403022766,
+            "roc_auc": 0.9733883982683983,
+            "pr_auc": 0.8565717312929291,
+            "calibration_error": 0.00743610681332737,
+            "mean_probability": 0.12637537717819214,
+            "positive_rate": 0.13108242303872888
+          }
+        ],
+        "mean_log_loss": 0.1424499365805902,
+        "latest_log_loss": 0.13799474061682945
+      },
+      "cpu_existing": {
+        "folds": [
+          {
+            "log_loss": 0.15315509276730657,
+            "brier": 0.04766109212003192,
+            "roc_auc": 0.9735465882409315,
+            "pr_auc": 0.8884753239700768,
+            "calibration_error": 0.004349203605880878,
+            "mean_probability": 0.16769159862093744,
+            "positive_rate": 0.16762060506950122
+          },
+          {
+            "log_loss": 0.13924709669131866,
+            "brier": 0.0432151461019727,
+            "roc_auc": 0.9726656277056276,
+            "pr_auc": 0.8544478481146266,
+            "calibration_error": 0.0073409067875040476,
+            "mean_probability": 0.12789617889937396,
+            "positive_rate": 0.13108242303872888
+          }
+        ],
+        "mean_log_loss": 0.14620109472931261,
+        "latest_log_loss": 0.13924709669131866,
+        "note": "Saved benchmark only; no CPU retraining in this run"
+      }
+    }
+  },
+  "best_iterations": {
+    "service": {
+      "xgb_depth6": [
+        1160,
+        677
+      ],
+      "xgb_lossguide": [
+        764,
+        382
+      ]
+    },
+    "late": {
+      "xgb_depth6": [
+        594,
+        651
+      ],
+      "xgb_lossguide": [
+        555,
+        518
+      ]
+    }
+  },
+  "selected_service_model": "xgb_depth6",
+  "selected_late_model": "xgb_lossguide",
+  "prediction_summary": {
+    "pred_service_min": {
+      "count": 5014.0,
+      "mean": 18.653483567125633,
+      "std": 11.64484101963871,
+      "min": 5.125275611877441,
+      "25%": 12.238297700881958,
+      "50%": 15.910592555999756,
+      "75%": 21.046826362609863,
+      "max": 137.494384765625
+    },
+    "pred_late_prob": {
+      "count": 5014.0,
+      "mean": 0.21321181448127838,
+      "std": 0.3425009365056289,
+      "min": 4.625615110853687e-05,
+      "25%": 0.0006861864239908755,
+      "50%": 0.008750327862799168,
+      "75%": 0.29751379042863846,
+      "max": 0.9996058344841003
+    }
+  },
+  "runtime_seconds": 71.91700250000576
+}

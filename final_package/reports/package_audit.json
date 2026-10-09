@@ -1,0 +1,43 @@
+{
+  "required_files_present": true,
+  "missing_files": [],
+  "raw_data_excluded": true,
+  "notebook_code_cells": 7,
+  "notebook_all_code_cells_executed": true,
+  "notebook_error_outputs": 0,
+  "task1_shape": [
+    5014,
+    3
+  ],
+  "task2a_shape": [
+    60,
+    3
+  ],
+  "task2b_shape": [
+    85,
+    6
+  ],
+  "task1_columns": [
+    "delivery_id",
+    "pred_service_min",
+    "pred_late_prob"
+  ],
+  "task2a_columns": [
+    "row_id",
+    "pred_total_volume_m3",
+    "pred_chilled_volume_m3"
+  ],
+  "task2b_columns": [
+    "scenario",
+    "order_ref",
+    "outlet_id",
+    "decision",
+    "vehicle_id",
+    "trip_id"
+  ],
+  "task1_model_loaded": true,
+  "task2a_model_loaded": true,
+  "all_quality_gates_passed": true,
+  "official_validator": "FEASIBILITY: PASSED - every rule satisfied.",
+  "package_ready": true
+}

@@ -1,0 +1,34 @@
+{
+  "task1": {
+    "service_time": {
+      "selected_model": "GPU XGBoost depth-6 ensemble",
+      "validation_design": "two most recent expanding-window chronological folds",
+      "mean_mae_minutes": 4.044108039200439,
+      "latest_fold_mae_minutes": 3.7876303895346104
+    },
+    "late_probability": {
+      "selected_model": "GPU XGBoost loss-guided ensemble",
+      "validation_design": "two most recent expanding-window chronological folds",
+      "mean_log_loss": 0.1424499365805902,
+      "latest_fold_log_loss": 0.13799474061682945
+    },
+    "training_device": "CUDA GPU",
+    "xgboost_version": "3.4.1"
+  },
+  "task2a": {
+    "total_volume_m3": {
+      "selected_model": "HistGradientBoostingRegressor",
+      "mean_recursive_10_week_wape": 0.05323158125540803
+    },
+    "chilled_volume_m3": {
+      "selected_model": "HistGradientBoostingRegressor",
+      "mean_recursive_10_week_wape": 0.039695420802471654
+    }
+  },
+  "task2b": {
+    "selected_policy": "fairness-first",
+    "served_orders": 77,
+    "deferred_orders": 8,
+    "official_validator": "FEASIBILITY: PASSED - every rule satisfied."
+  }
+}
